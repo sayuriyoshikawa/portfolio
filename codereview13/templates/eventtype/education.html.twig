@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<style>
+		.card {
+			margin-top: 2vw;
+			height: 23em;
+			transition: all 0.3s;
+			text-align: center;
+			box-shadow: 2px 2px 3px #c3c3c3;
+		}
+		.card:hover {
+			box-shadow: 6px 6px 12px #c3c3c3, -6px -6px 12px #c3c3c3;
+		}
+	</style>
+
+	<div class="container mt-5">
+
+		<section id="all">
+			<h2 class="allevents">Education Event</h2>
+			<div class="row g-4">
+				{% for event in events %}
+					{# making a loop in twig inside the variable events #}
+
+					<div class="col col-lg-3 col-md-4 col-sm-6">
+						<div class="card border-0 rounded-0">
+							<img src="{{event.picture}}" class="card-img-top rounded-0" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">{{event.name}}</h5>
+								<p class="card-text">
+									<small class="text-muted">{{event.time|date('F j, Y, g:i a')}}</small>
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="/details/{{event.id}}" class="btn btn-sm view">View</a>
+								<a href="/edit/{{event.id}}" class="btn btn-sm edit">Edit</a>
+								<a href="/delete/{{event.id}}" class="btn btn-sm delete">Delete</a>
+							</div>
+						</div>
+					</div>
+
+				{% endfor %}
+			</div>
+		</div>
+	{% endblock %}

@@ -1,0 +1,396 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Global Events
+{% endblock %}
+
+{% block body %}
+	<style>
+        .headertext {
+            text-align:center;
+            height: 10vh;
+            width:100vw;
+            color:white;
+             text-shadow: 2px 2px 5px rgb(240, 240, 240);
+        }
+		.bgCarousel {
+			height: 80vh;
+			width: 100vw;
+			z-index: -1;
+		}
+
+		.bgCarousel__item {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		.bgCarousel__item:nth-child(1) {
+			background-image: url("{{asset('picture/calousel1.jpg')}}");
+		}
+
+		.bgCarousel__item:nth-child(2) {
+			background-image: url("{{asset('picture/calousel2.jpg')}}");
+		}
+
+		.bgCarousel__item:nth-child(3) {
+			background-image: url("{{asset('picture/calousel4.jpg')}}");
+		}
+
+		.stage {
+			position: relative;
+
+			height: 10rem;
+		}
+
+		.stage_cardImage {
+			position: relative;
+			transform-style: preserve-3d;
+			transition: all 0.8s ease-in-out;
+		}
+
+		.stage_cardImage div {
+			position: absolute;
+			height: 10rem;
+			width: 100%;
+			text-align: center;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+
+		}
+		.stagecard {
+			text-align: center;
+			height: 10rem;
+			background-color: rgba(230, 208, 205, 0.8);
+
+		}
+		#cardt {
+			height: 10rem;
+			padding: 0;
+			text-align: center;
+		}
+
+		.stage_cardImage img {
+			height: 10rem;
+			width: 15rem;
+		}
+
+		.stage_cardImage_back {
+			transform: rotateY(180deg);
+
+		}
+
+		.stage_cardImage:hover {
+			transform: rotateY(180deg);
+			cursor: pointer;
+		}
+
+
+		.typecard {
+			width: 80vw;
+			height: 100%;
+			margin-top: -20vh;
+			padding: 20px;
+		}
+
+		.typecard a {
+			text-decoration: none;
+			color: black;
+		}
+		.typecard h5 {
+			font-size: calc(10px + 1rem);
+			margin-top: 20%;
+		}
+
+		.container {
+			margin-top: 5vw;
+		}
+		.allevents {
+			color: black;
+            text-align:center;
+		}
+		.vl {
+			border-left: 1.5px solid black;
+			height: 100px;
+			margin-left: 50%;
+		}
+	
+		.alleventcard {
+            margin-top: 2vw;
+            height: 25em;
+			transition: all 0.3s;
+            text-align:center;
+             box-shadow:  2px 2px 3px #c3c3c3;
+		}
+		.alleventcard:hover {
+            box-shadow:  6px 6px 12px #c3c3c3,
+             -6px -6px 12px #c3c3c3;
+		}
+		.view, .edit, .delete {
+            border-radius: 0px;
+            background: #ECE2E1;
+            box-shadow:  6px 6px 7px #e0d7d6,
+        }
+		.view:hover, .edit:hover, .delete:hover {
+            border-radius: 0px;
+            background: #cfc4c2;
+            box-shadow:  6px 6px 7px #e0d7d6,
+        }
+	</style>
+
+
+    <div class="headertext bg-dark">
+        <h1>Find your experience.</h1>
+    </div>
+
+	{# hero #}
+	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+		<div class="carousel-inner bgCarousel">
+			<div class="carousel-item bgCarousel__item active"></div>
+			<div class="carousel-item bgCarousel__item"></div>
+			<div class="carousel-item bgCarousel__item"></div>
+		</div>
+	</div>
+
+
+	<center>
+		<div class="typecard">
+			<div class="row">
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="#allsection">
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">ALL</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/all.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="/music">
+
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">Music</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/music.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="/arts">
+
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">Arts</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/arts.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="/education">
+
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">Education</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/education.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="/health">
+
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">Health</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/health.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="/fashion">
+
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">Fashion</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/fashion.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="/festival">
+
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">Festival</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/festival.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="/sport">
+
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">Sports</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/sports.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+				<div class="stage col-lg-4 col-md-4 col-sm-4 mb-4">
+					<div class="stage_cardImage" ontouchstart="">
+						<div class="stage_cardImage_front">
+							<div class="card stagecard p-0 border-0">
+								<a href="/other">
+
+									<div class="card-body p-0">
+										<h5 class="card-title" id="cardt">Others</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- /.stage_cardImage_front -->
+						<div class="stage_cardImage_back">
+							<img src="{{asset('picture/other.jpg')}}">
+						</div>
+						<!-- /.stage_cardImage_back -->
+					</div>
+					<!-- /.stage_cardImage -->
+				</div>
+				<!-- /.stage -->
+
+			</div>
+		</div>
+	</center>
+
+
+	<div class="vl"></div>
+	<div class="container">
+		<div class="main">
+			<section id="allsection">
+				<h1 class="allevents mb-5">All Events</h1>
+				<div class="row g-4 p-3">
+					{% for event in events %}
+						{# making a loop in twig inside the variable events #}
+
+						<div class="col col-lg-3 col-md-4 col-sm-6">
+							<div class="card alleventcard border-0 rounded-0 ">
+								<img src="{{event.picture}}" class="card-img-top rounded-0" alt="...">
+								<div class="card-body">
+									<h4 class="card-title fw-bold">{{event.name}}</h4>
+									<p class="card-text">
+										{{event.time|date('F j, Y, g:i a')}}
+									</p>
+
+									
+								</div>
+                                <div class="card-footer">
+                                    <a href="/details/{{event.id}}" class="btn btn-sm view">View</a>
+									<a href="/edit/{{event.id}}" class="btn btn-sm edit">Edit</a>
+									<a href="/delete/{{event.id}}" class="btn btn-sm delete">Delete</a>
+                                </div>
+							</div>
+						</div>
+
+					{% endfor %}
+				</div>
+
+			</section>
+		</div>
+	</div>
+{% endblock %}

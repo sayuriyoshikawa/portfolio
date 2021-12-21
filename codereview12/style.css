@@ -1,0 +1,149 @@
+.hero {
+    background-image: url("travels/pictures/travelbg.jpg");
+    background-size: cover;
+    width: 98.65vw;
+    height: 100vh;
+    transition: 1s;
+    position: relative;
+}
+.navbar button {
+    color: rgba(255, 255, 255, 0.9);
+}
+.navbar a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+.navbar a:hover {
+    text-decoration: none;
+}
+.nav2 {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1b2a49;
+}
+.nav2 a {
+    color: #1b2a49;
+    text-decoration: none;
+}
+.nav2 a:hover {
+    text-decoration: none;
+    color: #060708;
+}
+.nav2 i {
+    color: #1b2a49;
+}
+
+.herotext h1 {
+    color: rgba(240, 240, 240, 0.2);
+    font-size: calc(25px + 12vw);
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    font-family: "DM Serif Display", serif;
+}
+.herotext h2 {
+    color: rgba(240, 240, 240, 0.95);
+    font-size: calc(25px + 2vw);
+    position: absolute;
+    top: 26%;
+    left: 12%;
+    text-shadow: 2px 3px 4px rgb(94, 201, 255);
+    font-family: "Pinyon Script";
+}
+.heroright {
+    position: absolute;
+    top: 33%;
+    right: 2%;
+}
+.herocard {
+    background-color: rgba(221, 221, 221, 0.07);
+    backdrop-filter: blur(2px);
+    width: 17vw;
+    height: 9vw;
+    margin: 1vw;
+    min-width: 130px;
+    min-height: 60px;
+}
+.herocard a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+}
+.herocard h5 {
+    font-size: calc(5px + 1.5vw);
+}
+.herocard:hover {
+    background-color: rgba(221, 221, 221, 0.2);
+}
+
+.aboutcontainer {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10vw;
+}
+.aboutcontainer p {
+    width: 70%;
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+    min-width: 300px;
+    font-size: calc(5px + 1.5vw);
+    margin: auto;
+    text-shadow: 1px 3px 3px #fff5be;
+}
+
+.aboutpic {
+    width: 80%;
+    min-width: 320px;
+    margin: auto;
+}
+
+.aboutcontainer img {
+    height: 20vw;
+    margin: 0.5vw;
+}
+
+#sale {
+    width: 98.65vw;
+    height: 60vh;
+    background-image: url("travels/pictures/aboutback.png");
+    background-size: cover;
+}
+.saleleft {
+    height: 60vh;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    position: relative;
+}
+
+.saleleft h1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    font-size: calc(30px + 5vw);
+    color: #1b2a49;
+    text-shadow: 2px 3px 5px #fbfcff;
+    font-weight: bold;
+}
+
+.saleleft h4 {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    color: #ffffff;
+    text-shadow: 2px 1px 1px #b8b8b8;
+}
+
+.travelcontainer {
+    margin-top: 10vw;
+}
+a {
+    text-decoration: none;
+}
+#europe h1 {
+    margin: 3vw;
+}
+
+@media screen and (max-width: 1024px)  {
+    .cardtext {
+        display: none;
+    }
+}

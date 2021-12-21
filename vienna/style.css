@@ -1,0 +1,73 @@
+body {
+    font-family: serif;
+}
+
+header, footer {
+    height: 10vw;
+    background: rgb(255,166,250);
+background: linear-gradient(90deg, rgba(255,166,250,1) 0%, rgba(231,187,255,1) 49%, rgba(255,173,173,1) 100%);
+    text-align: center;
+    
+}
+
+
+header h1 {
+    font-size: 4vw;
+    padding-top:2.8vw;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.btn {
+    margin-top: 2vw;
+    margin-bottom: 0;
+    background-color: rgb(255, 224, 229);
+}
+
+.dropdown {
+    padding: 1vw;
+    text-align: right;
+}
+
+footer{
+    margin-top: 10vw;
+}
+
+footer h1 {
+    padding-top:3.5vw;
+    font-size: 2vw;
+    color: white;
+}
+
+.container {
+    margin-bottom: 5vw;
+} 
+
+.cardStart {
+    margin-top: 5vw;
+    text-align: center;
+}
+
+.cardStart h2 {
+    color: rgb(83, 60, 16);
+    height: 4.5vw;
+    padding-top: 0.5vw;
+    background: rgb(255,214,253);
+background: linear-gradient(90deg, rgba(255,214,253,1) 0%, rgba(249,237,255,1) 49%, rgba(255,206,206,1) 100%);
+    margin-bottom: 2vw;
+    margin-bottom: 3vw;
+    font-size: 3vw;
+}
+
+.card {
+   border: none;
+   box-shadow: 5px 5px 10px rgb(189, 174, 174);
+   transition:  width 1s, height 1s, transform 0.5s;
+}
+
+.card:hover {
+    transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+}

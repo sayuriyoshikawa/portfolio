@@ -1,0 +1,37 @@
+var movies = `[{
+    "title": "Space jam: A new legacy",
+    "image": "img/anewlegacy.jpg",
+    "genre": "comedy",
+    "description": "When LeBron and his young son Dom are trapped in a digital space by a rogue A.I., LeBron must get them home safe by leading Bugs, Lola Bunny.",
+    "likes": 50
+}, {
+    "title": "Jungle cruise",
+    "image": "img/junglecruise.jpg",
+    "genre": "fantasy",
+    "description": "Dr. Lily Houghton enlists the aid of wisecracking skipper Frank Wolff to take her down the Amazon in his dilapidated boat. Together, they search for an ancient tree that holds the power to heal.",
+    "likes": 35
+}, {
+    "title": "After We Collided",
+    "image": "img/afterwecollided.jpg",
+    "genre": "romance",
+    "description": "Tessa finds herself struggling with her complicated relationship with Hardin; she faces a dilemma that could change their lives forever.",
+    "likes": 20
+}, {
+    "title": "Demon slayer",
+    "image": "img/demonslayer.jpg",
+    "genre": "animation, action",
+    "description": "Anjirō Kamado, joined with Inosuke Hashibira boards the Infinity Train on a new mission with the Fire Hashira, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!",
+    "likes": 46
+}, {
+    "title": "Avatar",
+    "image": "img/avatar.jpg",
+    "genre": "scence fiction",
+    "description": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn.",
+    "likes": 60
+}, {
+    "title": "Don't breathe 2",
+    "image": "img/dontbreathe.jpg",
+    "genre": "horror",
+    "description": "The Blind Man has been hiding out for several years in an isolated cabin and has taken in and raised a young girl orphaned from a devastating house fire. ",
+    "likes": 28
+}]`
