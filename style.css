@@ -413,6 +413,10 @@ nav a:hover::after {
 	position: relative;
 }
 
+#projectsContainer {
+	width: 75%;
+}
+
 .projectFlower2, .projectTitle,.project1anime,.project2anime,.project3anime,.projectFlower {
 	opacity:0;
 }
@@ -438,6 +442,9 @@ nav a:hover::after {
 	text-align: center;
 	font-size: 3vw;
 }
+#projects p {
+	font-size: 1vw;
+}
 
 #projects .row {
 	margin-top: 2vw;
@@ -456,6 +463,9 @@ nav a:hover::after {
 }
 .card h5 {
 	font-size: 1.8vw;
+}
+.zindex {
+	z-index: 1;
 }
 
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -484,7 +494,15 @@ nav a:hover::after {
 }
 
 @media screen and (max-width: 425px) {
+	#projects {
+		height: 220vh;
+	}
 	
+#projects .container {
+	width: 90%;
+	height: 220vh;
+	margin-top: 200px;
+}
 	.project1 {
 		margin-top: 10px !important;
 		margin: auto;
@@ -902,6 +920,7 @@ a:hover {
 @media screen and (max-width: 426px) {
 	#contactContainer {
 		width: 80vw;
+		height:25vh;
 	}
 	#contactContainer h1{
 		font-size: 6vw;
