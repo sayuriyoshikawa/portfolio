@@ -121,7 +121,18 @@ $('.aboutme').on('inview', function(event, isInView) {
     } 
   });
 
+//designs
+$('.designsanime').on('inview', function(event, isInView) {
+  if (isInView) {//表示領域に入った時
+    $(this).addClass('animate__animated  animate__fadeInDown');//クラス名が付与
+  } 
+});
 
+$('.designImage').on('inview', function(event, isInView) {
+  if (isInView) {//表示領域に入った時
+    $(this).addClass('animate__animated  animate__fadeIn animate__delay-1s');//クラス名が付与
+  } 
+});
 
 
 //skills

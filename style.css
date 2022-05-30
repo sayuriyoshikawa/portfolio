@@ -346,8 +346,6 @@ nav a:hover::after {
 }
 
 /* about */
-
-
 .aboutme, .aboutRight, .aboutimg {
 	opacity: 0; 
 }
@@ -414,7 +412,7 @@ nav a:hover::after {
 }
 
 #projectsContainer {
-	width: 75%;
+	width: 70%;
 }
 
 .projectFlower2, .projectTitle,.project1anime,.project2anime,.project3anime,.projectFlower {
@@ -495,12 +493,12 @@ nav a:hover::after {
 
 @media screen and (max-width: 425px) {
 	#projects {
-		height: 220vh;
+		height: 120vh;
 	}
 	
 #projects .container {
 	width: 90%;
-	height: 220vh;
+	height: 100vh;
 	margin-top: 200px;
 }
 	.project1 {
@@ -609,9 +607,92 @@ a:hover {
 	--animate-delay:2.5s;
 }
 
+/* designs */
+.designsanime, .designImage{
+	opacity: 0;
+}
+
+#designsContainer {
+	width: 75%;
+}
+
+#designs {
+	height: 150vh;
+	margin-top: 5vh;
+}
+
+#designs h1 {
+	text-align: center;
+	font-size: 3vw;
+	margin-top: 10vh;
+}
+
+.designImage {
+	width: 12vw;
+	margin: 15px;
+	padding: 0;
+	transition: 0.5s;
+	border-radius: 15px;
+	box-shadow: 6px 2px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+.toprow {
+	justify-content: start;
+}
+
+.underrow {
+	justify-content: end;
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+	#designs {
+		height: 80vh;
+	}
+	
+	#designs h1 {
+		font-size: 4.5vw;
+		margin-top: 0;
+	}
+
+	.designImage {
+		width: 14vw;
+		margin: 5px;
+		padding: 0;
+		transition: 0.5s;
+		border-radius: 5px;
+		box-shadow: 6px 2px 7px 0px rgba(0, 0, 0, 0.1);
+	}
+}
+
+@media screen and (max-width: 425px) {
+	#designs {
+		margin-top: 70vh;
+	}
+
+	#designs h1 {
+		font-size: 6vw;
+	}
+
+	.designImage {
+		width: 25vw;
+		margin: 15px;
+		justify-content: center!important;
+		padding: 0;
+		transition: 0.5s;
+		border-radius: 0px;
+		box-shadow: 6px 2px 7px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.toprow {
+		justify-content: center;
+	}
+	
+	.underrow {
+		justify-content: center;
+	}
+}
 
 /* skills */
-
 .skillsBg2, .skillsanime, .dev-icon {
 	opacity: 0;
 }
@@ -663,7 +744,7 @@ a:hover {
 }
 
 .dev-icon {
-	width: 14.25%;
+	width: 12.25%;
 }
 
 
