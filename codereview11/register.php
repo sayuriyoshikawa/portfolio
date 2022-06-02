@@ -144,9 +144,7 @@ mysqli_close($connect);
 <body>
     <nav class="navbar navbar-expand-lg navbar">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fw-bold" href="index.php">Restaurant booking system</a>
-
-
+            <a class="navbar-brand text-white fw-bold" href="index.php">Adopt a pet</a>
         </div>
     </nav>
     <div class="container mt-5">
